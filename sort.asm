@@ -33,6 +33,8 @@ sort_inner:
     jal swap
     lw $ra, 0($sp)
     addi $sp, $sp, 4
+    addi $s3, $s3, -1
+    j sort_inner
 go_back_outer:
     jr $ra
 swap:   
